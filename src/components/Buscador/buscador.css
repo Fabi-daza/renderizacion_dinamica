@@ -1,0 +1,10 @@
+.searchbar{
+    display: flex;
+    justify-content: end;
+    background-color: #02416d;
+    height: 50px;
+}
+.searchbar input{
+    margin: 10px 20px;
+    width: 30%;
+}

@@ -1,0 +1,23 @@
+table{
+    width: 90%;
+    margin: 0 auto;
+}
+thead{
+    background-color: #02416d;
+    color: #ffffff;
+}
+tr{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+tr :nth-child(1){
+    width: 20%;
+}
+td {
+    width: 40%;
+    border: 1px solid #bbb8b8;
+}
+th {
+    width: 40%;
+}

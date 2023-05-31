@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Ingreso from './components/Formulario/Ingreso.jsx';
+import Tabla from './components/Tabla/Tabla';
+import { Colaboradores } from './datos';
+import Buscador from './components/Buscador/Buscador';
+
 
 function App() {
+  const [user, setUser] = useState(Colaboradores)
+  const [search, setSearch] = useState("")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Buscador setSearch={setSearch} search={search}/>
+      <Ingreso setUser={setUser} user={user}/>
+      <Tabla user={user} setSearch={setSearch} search={search}/>
     </div>
   );
 }
